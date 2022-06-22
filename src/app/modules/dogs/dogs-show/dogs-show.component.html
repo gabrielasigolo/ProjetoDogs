@@ -1,0 +1,9 @@
+<h1>Doguinhos 🐶 🐶 </h1>
+
+<section>
+    <p>File size: {{dogImage?.fileSizeBytes}} bytes</p>
+    <img [src]="dogImage?.url" alt="Image of dog" *ngIf="!isVideo">
+    <video [src]="dogImage?.url" *ngIf="isVideo" autoplay="true"></video>
+</section>
+
+<button (click)="woof()">Trocar doguinho</button>
